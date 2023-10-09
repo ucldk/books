@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-bg: #000;
+    --clr-bg-alt: #333;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--clr-bg);
+  font-family: system-ui;
+}
+
+.container {
+  margin: 1rem auto;
+  max-width: 100ch;
+}
+
+p {
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.navbar {
+  background: var(--clr-bg-alt);
+  overflow: hidden;
+
+  & h1 {
+    color: #ff1493;
+  }
+
+  &> div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    & ul {
+      align-items: center;
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+  }
+}
+

@@ -1,0 +1,37 @@
+{
+  "name": "books",
+  "version": "0.0.1",
+  "description": "Fake UCL Books overview",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "db:reset": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucldk/books.git"
+  },
+  "keywords": [
+    "ucl",
+    "books",
+    "education"
+  ],
+  "author": "Kenneth Clausen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ucldk/books/issues"
+  },
+  "homepage": "https://github.com/ucldk/books#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1",
+    "tedious": "^16.4.1"
+  }
+}

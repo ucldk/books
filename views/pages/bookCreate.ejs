@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<main class="container">
+  <h2>Ny Bog</h2>
+
+  <form action="/books/create" method="post">
+    <div>
+      <input type="text" value="" name="title" placeholder="Title" />
+    </div>
+
+    <div>
+      <input type="text" value="" name="author" placeholder="Author" />
+    </div>
+
+    <div>
+      <textarea name="description" placeholder="Description"></textarea>
+    </div>
+
+    <button type="submit">Opret Bog</button>
+  </form>
+</main>
+<%- include('../partials/footer') %>
+
+

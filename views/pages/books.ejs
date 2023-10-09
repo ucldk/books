@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<main class="container">
+  <h2>Bøger</h2>
+  <a href="/books/create">Opret ny bog</a>
+  <hr>
+  <div class="list">
+    <% for(let index in books) { %>
+      <div class="list__item">
+        <h3><a href="/books/<%= books[index].id %>"><%= books[index].title %></h3></a>
+        <p><%= books[index].author %></p>
+      </div>
+    <% } %>
+  </div>
+</main>
+<%- include('../partials/footer') %>
+
