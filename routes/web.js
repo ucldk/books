@@ -9,7 +9,7 @@ module.exports = () => {
   router.get('/', Default.index);
   router.get('/books', Books.index);
   router.get('/books/create', Books.createForm);
-  router.post('/books/create', Books.create);
+  router.post('/books/create', isLoggedIn, Books.create);
   router.get('/books/:bookId', Books.single);
   router.get('/status', (req, res) => res.sendStatus(200));
   return router;

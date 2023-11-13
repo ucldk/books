@@ -5,7 +5,7 @@ exports.index = async (req, res) => {
     const books = await Book.findAll();
     return res.render('pages/books', { books: books });
   } catch (e) {
-    cosnole.log(e);
+    console.log(e);
     return res.send('Error');
   }
 };
